@@ -4,6 +4,9 @@
 		"url": "https://github.com/jessehattabaugh/localcamera/issues"
 	},
 	"description": "app for taking and sharing photos with people in your area",
+	"devDependencies": {
+		"firebase-tools": "^7.13.0"
+	},
 	"homepage": "https://github.com/jessehattabaugh/localcamera#readme",
 	"keywords": [
 		"camera",
@@ -14,13 +17,14 @@
 		"map"
 	],
 	"license": "UNLICENSED",
-	"main": "index.js",
 	"name": "localcamera",
+	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "git+https://github.com/jessehattabaugh/localcamera.git"
 	},
 	"scripts": {
+		"start": "firebase serve",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"version": "0.0.0"
