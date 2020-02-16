@@ -5,7 +5,9 @@
 	},
 	"description": "app for taking and sharing photos with people in your area",
 	"devDependencies": {
-		"firebase-tools": "^7.13.0"
+		"firebase-tools": "^7.13.0",
+		"lighthouse-ci": "^1.10.0",
+		"start-server-and-test": "^1.10.8"
 	},
 	"homepage": "https://github.com/jessehattabaugh/localcamera#readme",
 	"keywords": [
@@ -24,8 +26,9 @@
 		"url": "git+https://github.com/jessehattabaugh/localcamera.git"
 	},
 	"scripts": {
+		"audit": "lighthouse-ci http://localhost:5000 --score=40",
 		"start": "firebase serve",
-		"test": "echo \"Error: no test specified\" && exit 1"
+		"test": "start-test 5000 audit"
 	},
 	"version": "0.0.0"
 }
