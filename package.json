@@ -1,0 +1,27 @@
+{
+	"author": "Jesse Hattabaugh",
+	"bugs": {
+		"url": "https://github.com/jessehattabaugh/localcamera/issues"
+	},
+	"description": "app for taking and sharing photos with people in your area",
+	"homepage": "https://github.com/jessehattabaugh/localcamera#readme",
+	"keywords": [
+		"camera",
+		"photos",
+		"photography",
+		"location",
+		"geolocation",
+		"map"
+	],
+	"license": "UNLICENSED",
+	"main": "index.js",
+	"name": "localcamera",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/jessehattabaugh/localcamera.git"
+	},
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"version": "0.0.0"
+}
