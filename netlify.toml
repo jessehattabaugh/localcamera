@@ -1,0 +1,7 @@
+[build]
+  command = "npx cowsay 🚫👷"
+  functions = "functions"
+  publish = "public"
+
+[dev]
+  autoLaunch = false

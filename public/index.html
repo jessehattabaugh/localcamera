@@ -16,34 +16,8 @@
 
 		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸</h3>
 
-		<!-- 
-			Import Firebase using their quirky "reserved namespace" /__/* urls
-			https://firebase.google.com/docs/hosting/reserved-urls
-			Note: order is important, first and last are required 
-		-->
-		<script src="/__/firebase/7.8.2/firebase-app.js"></script>
-		<!--<script src="/__/firebase/7.8.2/firebase-auth.js"></script>-->
-		<!--<script src="/__/firebase/7.8.2/firebase-database.js"></script>-->
-		<!--<script src="/__/firebase/7.8.2/firebase-messaging.js"></script>-->
-		<script src="/__/firebase/7.8.2/firebase-storage.js"></script>
-		<script src="/__/firebase/init.js"></script>
-
 		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				// Firebase should be available by now
-				try {
-					const app = firebase.app();
-					const enabledFeatures = [
-						'auth',
-						'database',
-						'messaging',
-						'storage',
-					].filter((feature) => typeof app[feature] === 'function');
-					console.debug('🔥Firebase SDK loaded', enabledFeatures);
-				} catch (e) {
-					console.error(e);
-				}
-			});
+			console.debug('Hello Javascript!');
 		</script>
 	</body>
 </html>
