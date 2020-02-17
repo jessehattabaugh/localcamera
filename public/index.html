@@ -16,60 +16,11 @@
 
 		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸</h3>
 
-		<div id="reactMountPoint">Loading...</div>
+		<local-camera>Loading...</local-camera>
 
-		<!-- load firebase sdk from magic firebase hosting paths -->
-		<script defer src="/__/firebase/7.8.2/firebase-app.js"></script>
-
-		<!--<script defer src="/__/firebase/7.8.2/firebase-auth.js"></script>-->
-		<!--<script defer src="/__/firebase/7.8.2/firebase-database.js"></script>-->
-		<!--<script defer src="/__/firebase/7.8.2/firebase-messaging.js"></script>-->
-		<script defer src="/__/firebase/7.8.2/firebase-storage.js"></script>
-
-		<!-- initialize the SDK after all desired features are loaded -->
-		<script defer src="/__/firebase/init.js"></script>
-
-		<!-- load React from CDN -->
-		<script
-			crossorigin
-			src="https://unpkg.com/react@16/umd/react.development.js"
-		></script>
-		<script
-			crossorigin
-			src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
-		></script>
-
-		<script>
-			document.addEventListener('DOMContentLoaded', () => {
-				// React and Firebase should be available by now
-				try {
-
-					// instantiate the firebase app
-					const app = firebase.app();
-					const enabledFeatures = [
-						'auth',
-						'database',
-						'messaging',
-						'storage',
-					].filter((feature) => typeof app[feature] === 'function');
-					console.debug('🔥 Firebase app ready', enabledFeatures);
-
-					// instantiate the react app
-					const reactMountPoint = document.getElementById(
-						'reactMountPoint',
-					);
-					const e = React.createElement;
-					function App() {
-						return e('main', {}, [e('h1', {}, ['hello react'])]);
-					}
-					ReactDOM.render(App(), reactMountPoint);
-					console.debug('react mounted');
-				} catch (e) {
-					console.error(e);
-				}
-
-				
-			});
+		<script type="module">
+			import LocalCamera from './local-camera.js';
+			customElements.define('local-camera', LocalCamera);
 		</script>
 	</body>
 </html>
