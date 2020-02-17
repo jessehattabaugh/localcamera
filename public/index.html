@@ -4,24 +4,29 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>localcamera🗺️📸</title>
-
-		<!-- update the version number as needed -->
-		<script defer src="/__/firebase/7.8.2/firebase-app.js"></script>
-		<!-- include only the Firebase features as you need -->
-		<script defer src="/__/firebase/7.8.2/firebase-auth.js"></script>
-		<!--<script defer src="/__/firebase/7.8.2/firebase-database.js"></script>-->
-		<!--<script defer src="/__/firebase/7.8.2/firebase-messaging.js"></script>-->
-		<script defer src="/__/firebase/7.8.2/firebase-storage.js"></script>
-		<!-- initialize the SDK after all desired features are loaded -->
-		<script defer src="/__/firebase/init.js"></script>
-
-		<style media="screen"></style>
+		<style media="screen">
+			body {
+				font-family: sans-serif;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>localcamera🗺️📸</h1>
 		<h2>🌐📍🖼️📸📌🚏</h2>
 
-		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸 </h3>
+		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸</h3>
+
+		<!-- 
+			Import Firebase using their quirky "reserved namespace" /__/* urls
+			https://firebase.google.com/docs/hosting/reserved-urls
+			Note: order is important, first and last are required 
+		-->
+		<script src="/__/firebase/7.8.2/firebase-app.js"></script>
+		<!--<script src="/__/firebase/7.8.2/firebase-auth.js"></script>-->
+		<!--<script src="/__/firebase/7.8.2/firebase-database.js"></script>-->
+		<!--<script src="/__/firebase/7.8.2/firebase-messaging.js"></script>-->
+		<script src="/__/firebase/7.8.2/firebase-storage.js"></script>
+		<script src="/__/firebase/init.js"></script>
 
 		<script>
 			document.addEventListener('DOMContentLoaded', function() {
@@ -34,7 +39,7 @@
 						'messaging',
 						'storage',
 					].filter((feature) => typeof app[feature] === 'function');
-					console.debug('Firebase SDK loaded', enabledFeatures);
+					console.debug('🔥Firebase SDK loaded', enabledFeatures);
 				} catch (e) {
 					console.error(e);
 				}

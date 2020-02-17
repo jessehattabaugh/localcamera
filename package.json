@@ -27,9 +27,10 @@
 		"url": "git+https://github.com/jessehattabaugh/localcamera.git"
 	},
 	"scripts": {
-		"audit": "lighthouse-ci http://localhost:5000 --score=40",
-		"start": "firebase serve",
-		"test": "start-test 5000 audit"
+		"audit": "lighthouse-ci http://localhost:1234 --score=40",
+		"deploy": "firebase deploy",
+		"start": "firebase serve --host=localhost --port=1234",
+		"test": "start-test 1234 audit"
 	},
 	"version": "0.0.0"
 }
