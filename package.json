@@ -6,6 +6,7 @@
 	"description": "app for taking and sharing photos with people in your area",
 	"devDependencies": {
 		"husky": "^4.2.3",
+		"kill-port": "^1.6.0",
 		"lighthouse-ci": "^1.10.0",
 		"netlify-cli": "^2.32.0",
 		"start-server-and-test": "^1.10.8"
@@ -30,6 +31,7 @@
 		"audit": "lighthouse-ci http://localhost:8888 --score=40",
 		"deploy": "netlify deploy",
 		"start": "netlify dev",
+		"stop": "kill-port 8888",
 		"test": "start-test 8888 audit"
 	},
 	"version": "0.0.0"
