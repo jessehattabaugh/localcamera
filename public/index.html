@@ -16,8 +16,11 @@
 
 		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸</h3>
 
-		<script>
-			console.debug('Hello Javascript!');
+		<photo-button>Loading...</photo-button>
+
+		<script type="module">
+			import photoButton from './photoButton.js';
+			customElements.define('photo-button', photoButton);
 		</script>
 	</body>
 </html>
