@@ -3,16 +3,17 @@ app for taking and sharing photos with people in your area
 
 # development
 
-After cloning this repository run `npm install` then `npx firebase login`.
+After cloning this repository run `npm install` maybe `npx netlify login`.
 
 Subsequently you may run `npm start` to start the local development server.
 
 # production
 
-[The Production Site](https://localcamera.firebaseapp.com) is [hosted on Firebase](https://console.firebase.google.com/project/localcamera/overview) 
+[The Production Site](localcamera.netlify.com) is [hosted on Netlify]() 
 
-https://localcamera.firebaseapp.com or https://localcamera.web.app/
+Eventually it will probably be at https://localcamera.com (just gotta crowd fund me $2k)
 
 To deploy your local copy 
 1. Be an Admin (sleep with Jesse)
 2. Run `npm run deploy`
+
