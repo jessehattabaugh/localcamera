@@ -6,6 +6,7 @@
 	"description": "app for taking and sharing photos with people in your area",
 	"devDependencies": {
 		"firebase-tools": "^7.13.0",
+		"husky": "^4.2.3",
 		"lighthouse-ci": "^1.10.0",
 		"start-server-and-test": "^1.10.8"
 	},
