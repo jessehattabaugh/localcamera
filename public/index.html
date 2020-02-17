@@ -4,29 +4,47 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>localcamera🗺️📸</title>
-
-		<!-- update the version number as needed -->
-		<script defer src="/__/firebase/7.8.2/firebase-app.js"></script>
-		<!-- include only the Firebase features as you need -->
-		<script defer src="/__/firebase/7.8.2/firebase-auth.js"></script>
-		<!--<script defer src="/__/firebase/7.8.2/firebase-database.js"></script>-->
-		<!--<script defer src="/__/firebase/7.8.2/firebase-messaging.js"></script>-->
-		<script defer src="/__/firebase/7.8.2/firebase-storage.js"></script>
-		<!-- initialize the SDK after all desired features are loaded -->
-		<script defer src="/__/firebase/init.js"></script>
-
-		<style media="screen"></style>
+		<style media="screen">
+			body {
+				font-family: sans-serif;
+			}
+		</style>
 	</head>
 	<body>
 		<h1>localcamera🗺️📸</h1>
 		<h2>🌐📍🖼️📸📌🚏</h2>
 
-		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸 </h3>
+		<h3>No people or personal property🚫🤳🚷🏘️🚻🚸</h3>
+
+		<div id="reactMountPoint">Loading...</div>
+
+		<!-- load firebase sdk from magic firebase hosting paths -->
+		<script defer src="/__/firebase/7.8.2/firebase-app.js"></script>
+
+		<!--<script defer src="/__/firebase/7.8.2/firebase-auth.js"></script>-->
+		<!--<script defer src="/__/firebase/7.8.2/firebase-database.js"></script>-->
+		<!--<script defer src="/__/firebase/7.8.2/firebase-messaging.js"></script>-->
+		<script defer src="/__/firebase/7.8.2/firebase-storage.js"></script>
+
+		<!-- initialize the SDK after all desired features are loaded -->
+		<script defer src="/__/firebase/init.js"></script>
+
+		<!-- load React from CDN -->
+		<script
+			crossorigin
+			src="https://unpkg.com/react@16/umd/react.development.js"
+		></script>
+		<script
+			crossorigin
+			src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"
+		></script>
 
 		<script>
-			document.addEventListener('DOMContentLoaded', function() {
-				// Firebase should be available by now
+			document.addEventListener('DOMContentLoaded', () => {
+				// React and Firebase should be available by now
 				try {
+
+					// instantiate the firebase app
 					const app = firebase.app();
 					const enabledFeatures = [
 						'auth',
@@ -34,10 +52,23 @@
 						'messaging',
 						'storage',
 					].filter((feature) => typeof app[feature] === 'function');
-					console.debug('Firebase SDK loaded', enabledFeatures);
+					console.debug('🔥 Firebase app ready', enabledFeatures);
+
+					// instantiate the react app
+					const reactMountPoint = document.getElementById(
+						'reactMountPoint',
+					);
+					const e = React.createElement;
+					function App() {
+						return e('main', {}, [e('h1', {}, ['hello react'])]);
+					}
+					ReactDOM.render(App(), reactMountPoint);
+					console.debug('react mounted');
 				} catch (e) {
 					console.error(e);
 				}
+
+				
 			});
 		</script>
 	</body>
